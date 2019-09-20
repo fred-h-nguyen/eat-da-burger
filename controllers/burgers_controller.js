@@ -9,8 +9,10 @@ var router = express.Router();
 
 router.get('/', function (req, res) {
     burger.selectAll(function (data) {
-        console.log(data);
-        res.json(data)
+        var hbobject = {
+            burger: data
+        }
+        res.render('index', hbobject)
     });
 });
 
@@ -22,6 +24,7 @@ router.post('/api/burgers', function (req, res) {
 
 router.put('/api/burgers/:id', function (req, res) {
     var id = req.params.id;
+
     burger.updateOne('devoured', true, id, function (result) {
         if (result.changedRows == 0) {
             // If no rows were changed, then the ID must not exist, so 404

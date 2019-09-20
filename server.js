@@ -7,9 +7,11 @@ var app = express();
 
 // static content for the app
 app.use(express.static('public'));
+//Parse application as JSON
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //handlebars setup
-
 var exphbs = require('express-handlebars');
 
 app.engine('handlebars',exphbs({defaultLayout:'main'}));
@@ -20,6 +22,8 @@ app.set('view engine', 'handlebars');
 var routes = require('./controllers/burgers_controller');
 
 app.use(routes);
+
+
 
 // start listening for server
 

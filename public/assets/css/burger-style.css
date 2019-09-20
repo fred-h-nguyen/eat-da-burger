@@ -1,0 +1,19 @@
+.container {
+margin: 0 auto;
+}
+
+.burger-view{
+    display: flex
+}
+
+.eaten{
+    width: 50%;
+}
+
+.uneaten{
+    width: 50%;
+}
+
+.burger-list{
+    display: flex;
+}

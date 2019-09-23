@@ -1,9 +1,21 @@
 .container {
-margin: 0 auto;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body{
+    background-color: sandybrown;
+}
+
+#burger-img{
+    width:15%;
 }
 
 .burger-view{
-    display: flex
+    width:60%;
+    display: flex;
+   margin: 0 auto;
 }
 
 .eaten{
@@ -17,3 +29,10 @@ margin: 0 auto;
 .burger-list{
     display: flex;
 }
+
+#burger{
+    width:250px;
+    height: 100px;
+}
+
+.devour{margin-left: 15px;}
